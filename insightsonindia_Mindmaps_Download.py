@@ -1,9 +1,4 @@
 
-# coding: utf-8
-
-# In[32]:
-
-
 from bs4 import BeautifulSoup as BS
 import urllib.request as urllib2
 import requests
@@ -11,43 +6,19 @@ import lxml
 import re
 import os
 
-
-# In[33]:
-
-
 path_to_store_images = '/home/karthik/Desktop/CSE/InsightsonIndia/'
-
-
-# In[34]:
-
 
 quote_page = 'http://www.insightsonindia.com/insights-mindmaps-on-important-current-issues-for-upsc-civil-services-exam/'
 urlopen = requests.get(quote_page)
 html = urlopen.content
 soup = BS(html, "lxml")
 
-
-# In[35]:
-
-
 a = soup.find_all('div',attrs={'class':'entry themeform'})[0]
-
-
-# In[36]:
-
 
 b = a.findAll('a', attrs={'href':re.compile(r".*jpg")})
 
-
-# In[37]:
-
-
 #finding href links from variable b and stor it in images
 images = [a['href'] for a in b]
-
-
-# In[ ]:
-
 
 # here we are spliting the href(Image URL) to 2 parts.
 # 1) Year and Month ==> To create folder
@@ -108,11 +79,6 @@ for i in images:
             #continue if any exception occured
             continue
     
-    
-
-
-# In[ ]:
-
 
 
 
