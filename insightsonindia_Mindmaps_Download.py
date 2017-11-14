@@ -59,8 +59,8 @@ for i in images:
             if os.path.exists(directory):
                 #checking if folder  exists, check for the file exists or not
                 if os.path.isfile(directory_filename)==True:
-                    
-                    pass
+                    break
+                    #pass
                 else:
                     #if file not exists in the fodler create the file
                     
