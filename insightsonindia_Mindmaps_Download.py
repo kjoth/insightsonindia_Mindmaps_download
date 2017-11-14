@@ -6,7 +6,7 @@ import lxml
 import re
 import os
 
-path_to_store_images = '/home/karthik/Desktop/CSE/InsightsonIndia/'
+path_to_store_images = '/home/karthik/Desktop/CSE/InsightsonIndia/Mindmaps'
 
 quote_page = 'http://www.insightsonindia.com/insights-mindmaps-on-important-current-issues-for-upsc-civil-services-exam/'
 urlopen = requests.get(quote_page)
